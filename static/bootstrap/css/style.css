@@ -78,10 +78,17 @@ p{
     #menu li a {
         font-size: 12pt;
     }
+    
 }
 
 @media (min-width: 1200px){
     #menu li a {
         font-size: 14pt;
+    }
+}
+
+@media print{
+    footer {
+        page-break-inside: always;
     }
 }

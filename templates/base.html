@@ -3,11 +3,14 @@
 <!doctype html>
 
 <html>
+
     <head>
         <title>Casa de Dona Brasilina</title>
     
+        {% block viewport%}
+
+        {% endblock %}
         <!-- CSS -->
-        
         <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
         <link href="{% static 'bootstrap/css/style.css' %}" rel="stylesheet">
         <link href="{% static 'bootstrap/css/buttons.css' %}" rel="stylesheet">
@@ -34,10 +37,10 @@
                 <div id="menu" class="collapse navbar-collapse">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item active mt-xl-5 mt-lg-5">
-                            <a class="nav-link"href="#">Pagina Inicial</a>
+                            <a class="nav-link"href="/">Pagina Inicial</a>
                         </li>
                         <li class="nav-item mt-xl-5 mt-lg-5">
-                            <a class="nav-link" href="#servicos">Serviços</a>
+                            <a class="nav-link" href="/#servicos">Serviços</a>
                         </li>
                         <li class="nav-item mt-xl-5 mt-lg-5">
                             <a class="nav-link" href="#portfolio">Portfolio</a>
@@ -52,9 +55,8 @@
                             <a class="nav-link" href="#contato">Contato</a>
                         </li>
 
-                        <!--promoçoes -->
                         <li class="nav-item mt-xl-5 mt-lg-5">
-                            <a class="nav-link" href="#">Alguma coisa</a>
+                            <a class="nav-link" href="{% url 'website_promo' %}">Promoções</a>
                         </li>
                         
                     </ul>
@@ -63,475 +65,20 @@
                 
             </nav>
 
-                <!-- Carousel -->
-
-                <div class="container-fluid">
-                    
-                    <div class="row">
-                        
-                        <div class="col"></div>
-                        
-                            <div class="col-12">
-                                
-                            <div id="demo" class="carousel slide" data-ride="carousel">
-                                
-                                <ol class="carousel-indicators">
-                                        <li data-target="#demo" data-slide-to="0" class="active"></li>
-                                        <li data-target="#demo" data-slide-to="1"></li>
-                                </ol>
-                                
-                                <!-- The slideshow -->
-                                <div class="carousel-inner center-block">
-                                    
-                                    <div class="carousel-item active">
-                                        
-                                    <img src="{% static 'bootstrap/images/banner.png' %}" class="img-fluid" style="width: 100%; height: 50%">
-                                        
-                                    </div>
-
-                                    
-                                    <div class="carousel-item">
-                                        
-                                    <img src="{% static 'bootstrap/images/img.png' %}" class="img-fluid" style="width: 100%; height: 50%;">
-                                        
-                                    </div>
-
-                                </div>
-                                
-
-                                <!-- Left and right controls -->
-                                <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                                    
-                                <span class="carousel-control-prev-icon"></span>
-                                </a>
-                                
-                                <a class="carousel-control-next" href="#demo" data-slide="next">
-                                    
-                                    <span class="carousel-control-next-icon"></span>
-                                    
-                                </a>
-                                
-                            </div>
-                                
-                        </div>
-
-                    </div>
-                        
-                </div>
-            
-            <!-- Serviços -->
-            
-            <div class="container" id="servicos">
-                
-                <div class="row mt-5">
-                    
-                    <div class="col">
-                    
-                        <div class="col-12 text-center">
-                        
-                            <h1>Serviços</h1>
-                            <img src="{% static 'bootstrap/images/divisor.png' %}" class="img-fluid">
-                            
-                        </div>
-                    
-                    </div>
-                
-                </div>
-                
-                <div class="row mt-5">
-                
-                    <div class="row">
-                        
-                        <div class="col-4">
-                            
-                            <img src="{% static 'bootstrap/images/serv.png' %}" class="img-fluid circle float-left mr-2">
-                                        
-                            <h5>Teste</h5>
-                            <p style="font-size: 8pt">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis lectus nulla at volutpat. Id semper risus in hendrerit gravida rutrum quisque. A cras semper auctor neque
-                            </p>
-            
-                        
-                        </div>
-                        
-                        <div class="col-4">
-                            
-                            <img src="{% static 'bootstrap/images/serv.png' %}" class="img-fluid circle float-left mr-2">
-                                        
-                            <h5>Teste</h5>
-                            <p style="font-size: 8pt">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis lectus nulla at volutpat. Id semper risus in hendrerit gravida rutrum quisque. A cras semper auctor neque
-                            </p>
-            
-                        
-                        </div>
-                    
-                        <div class="col-4">
-                            
-                            <img src="{% static 'bootstrap/images/serv.png' %}" class="img-fluid circle float-left mr-2">
-                                        
-                            <h5>Teste</h5>
-                            <p style="font-size: 8pt">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis lectus nulla at volutpat. Id semper risus in hendrerit gravida rutrum quisque. A cras semper auctor neque
-                            </p>
-                        </div>
-                        
-                    </div>                
-
-                    <div class="row mt-5">
-                
-                        <div class="col-4">
-                            
-                            <img src="{% static 'bootstrap/images/serv.png' %}" class="img-fluid circle float-left mr-2">
-                                        
-                            <h5>Teste</h5>
-                            <p style="font-size: 8pt">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis lectus nulla at volutpat. Id semper risus in hendrerit gravida rutrum quisque. A cras semper auctor neque
-                            </p>
-            
-
-                            
-                        </div>
-                    
-                        
-                        <div class="col-4">
-                            
-                            <img src="{% static 'bootstrap/images/serv.png' %}" class="img-fluid circle float-left mr-2">
-                                        
-                            <h5>Teste</h5>
-                            <p style="font-size: 8pt">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis lectus nulla at volutpat. Id semper risus in hendrerit gravida rutrum quisque. A cras semper auctor neque
-                            </p>
-            
-                        
-                        </div>
-                        
-                        <div class="col-4">
-                            
-                            <img src="{% static 'bootstrap/images/serv.png' %}" class="img-fluid circle float-left mr-2">
-                                        
-                            <h5>Teste</h5>
-                            <p style="font-size: 8pt">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis lectus nulla at volutpat. Id semper risus in hendrerit gravida rutrum quisque. A cras semper auctor neque
-                            </p>
-            
-                        
-                        </div>
-                    </div>
-                    
-                </div>
-            
-            </div>
-            
-            <!-- Portfolio -->
-            
-            <div class="container-fluid pt-5">
-            
-                <div class="row mt-5">
-                
-                    <div class="col">
-                        
-                        <div class="col-12 text-center">
-                        
-                            <h1>Portfólio</h1>
-                            <img src="{% static 'bootstrap/images/divisor.png' %}" class="img-fluid">
-                            
-                        </div>
-                    
-                        <!-- Buttons Portfolio -->
-                        
-                        <div class="container" id="portfolio">
-                            
-                            <div class="row mt-5">
-                            
-                                <div class="col-12">
-                        <!-- button group -->
-                                    <div class="btn-group" role="group">
-                                    
-                                        <!-- Button all -->
-                                    
-                                        <a href="#" class="mr-md-0 mr-xl-4 mr-lg-2 ml-xl-5 ml-md-0 ml-lg-5 pl-xl-5 pl-lg-5 pl-md-0">
-                                            <button id="button" type="button" class="btn btn-all">Todos</button>
-                                        </a>
-                                        
-                                        <!-- Button Cake -->
-                                        
-                                        <a href="#" class="mr-md-0 mr-xl-4 mr-lg-2">
-                                            <button id="button" type="button" class="btn btn-cake">Bolos</button>
-                                        </a>
-                                        
-                                        <!-- Button Naked cake -->
-                                        
-                                        <a href="#" class="mr-md-0 mr-xl-4 mr-lg-2">
-                                            <button id="button" type="button" class="btn btn-naked">Naked Cake</button>
-                                        </a>
-                                        
-                                        <!-- Button Candies -->
-                                        
-                                        <a href="#" class="mr-md-0 mr-xl-4 mr-lg-2">
-                                            <button id="button" type="button" class="btn btn-pink">Doces Finos</button>
-                                        </a>
-                                        
-                                        <!-- Button Trouffles -->
-                                        
-                                        <a href="#" class="mr-xl-4 mr-lg-2">
-                                            <button id="button" type="button" class="btn btn-orange">Trufas</button>
-                                        </a>
-                                        
-                                        <!-- Decoraçao p casamento --> 
-                                        
-                                        <a href="#" class="mr-md-0 mr-xl-4 mr-lg-2">
-                                            <button id="button" type="button" class="btn btn-aquamarine">Decorações</button>
-                                        </a>
-                                        
-                                        <!-- button Easter Eggs -->
-                                        
-                                        <a href="#" class="mr-md-0 mr-xl-4 mr-lg-2">
-                                            <button id="button" type="button" class="btn btn-secondary">Ovos de Colher</button>
-                                        </a>
-                                    
-                                    </div>
-                                    
-                                </div>
-                            
-                            </div>
-
-                            <div class="row mt-5">
-                            
-                            <!-- Img 1 -->
-                                <div class="col-3"> 
-                                    <img src="{% static 'bootstrap/images/imgport1.png' %}" class="img-fluid d-block">
-                                    <div id="background1" class="text-center">
-                                        <h5>Lorem Ipsum</h5>
-                                        <p style="font-size: 8pt;">Lorem ipsum dolor amet sit</p>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm btn-block mt-md-n3 mt-xl-0 mt-lg-0" data-toggle="modal" data-target="#modal">
-                                            Saiba Mais
-                                        </button>
-
-                                        <!-- modal -->
-                                        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="Rotulo do modal">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        
-                                                        <h4 class="modal-title" id="titulo">Titulo do modal</h4>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                        
-                                                    </div>
-
-                                                    <div class="modal-body">
-                                                        <p>{% lorem 2 %}</p>
-                                                        <img src="{% static 'bootstrap/images/imgport1.png' %}" class="img-fluid">
-
-                                                    </div>
-
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <!-- Img 2 -->
-                                <div class="col-3">
-                                    <img src="{% static 'bootstrap/images/imgport2.png' %}" class="img-fluid d-block">
-                                    <div id="background1" class="text-center">
-                                        <h5>Lorem Ipsum</h5>
-                                        <p style="font-size: 8pt;">Lorem ipsum dolor amet sit</p>
-                                        <a href="#" role="button" class="btn btn-outline-secondary btn-sm btn-block mt-md-n3 mt-xl-0 mt-lg-0">Saiba Mais</a>
-
-                                    </div>
-                                </div>
-
-                                <!-- Img 3 -->
-                                <div class="col-3">
-                                    <img src="{% static 'bootstrap/images/imgport3.png' %}" class="img-fluid d-block">
-                                    <div id="background1" class="text-center">
-                                        <h5>Lorem Ipsum</h5>
-                                        <p style="font-size: 8pt;">Lorem ipsum dolor amet sit</p>
-                                        <a href="#" role="button" class="btn btn-outline-secondary btn-sm btn-block mt-md-n3 mt-xl-0 mt-lg-0">Saiba Mais</a>
-
-                                    </div>                                
-                                </div>
-
-                                <!-- Img 4 -->
-                                <div class="col-3">
-                                    <img src="{% static 'bootstrap/images/imgport4.png' %}" class="img-fluid d-block">
-                                    <div id="background1" class="text-center">
-                                        <h5>Lorem Ipsum</h5>
-                                        <p style="font-size: 8pt;">Lorem ipsum dolor amet sit</p>
-                                        <a href="#" role="button" class="btn btn-outline-secondary btn-sm btn-block mt-md-n3 mt-xl-0 mt-lg-0">Saiba Mais</a>
-
-                                    </div>                                
-                                </div>
-                            </div>
-
-                            <div class="row mt-3">
-                            <!-- Img 5 -->
-                                <div class="col-3">
-                                    <img src="{% static 'bootstrap/images/imgport5.png' %}" class="img-fluid d-block">
-                                    <div id="background1" class="text-center">
-                                        <h5>Lorem Ipsum</h5>
-                                        <p style="font-size: 8pt;">Lorem ipsum dolor amet sit</p>
-                                        <a href="#" role="button" class="btn btn-outline-secondary btn-sm btn-block mt-md-n3 mt-xl-0 mt-lg-0">Saiba Mais</a>
-
-                                    </div>                                
-                                </div>
-
-                                <!-- Img 6 -->
-                                <div class="col-3">
-                                    <img src="{% static 'bootstrap/images/imgport6.png' %}" class="img-fluid d-block">
-                                    <div id="background1" class="text-center">
-                                        <h5>Lorem Ipsum</h5>
-                                        <p style="font-size: 8pt;">Lorem ipsum dolor amet sit</p>
-                                        <a href="#" role="button" class="btn btn-outline-secondary btn-sm btn-block mt-md-n3 mt-xl-0 mt-lg-0">Saiba Mais</a>
-
-                                    </div>                                
-                                </div>
-
-                                <!-- Img 7 -->
-                                <div class="col-3">
-                                    <img src="{% static 'bootstrap/images/imgport7.png' %}" class="img-fluid d-block">
-                                    <div id="background1" class="text-center">
-                                        <h5>Lorem Ipsum</h5>
-                                        <p style="font-size: 8pt;">Lorem ipsum dolor amet sit</p>
-                                        <a href="#" role="button" class="btn btn-outline-secondary btn-sm btn-block mt-md-n3 mt-xl-0 mt-lg-0">Saiba Mais</a>
-
-                                    </div>                                
-                                </div>
-
-                                <!-- Img 8 -->
-                                <div class="col-3">
-                                    <img src="{% static 'bootstrap/images/imgport8.png' %}" class="img-fluid d-block">
-                                    <div id="background1" class="text-center">
-                                        <h5>Lorem Ipsum</h5>
-                                        <p style="font-size: 8pt;">Lorem ipsum dolor amet sit</p>
-                                        <a href="#" role="button" class="btn btn-outline-secondary btn-sm btn-block mt-md-n3 mt-xl-0 mt-lg-0">Saiba Mais</a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-    
-                        </div>
-
-                    </div>
-
-                </div>
-                    
-            </div>
-                
-
-            <!-- Sobre nós -->
-            
-            <div class="container" id="sobre">
-
-                <div class="row mt-5">
-                    
-                    <div class="col">
-
-                        <div class="col-12 text-center">
-
-                            <h1>Sobre Nós</h1>
-                            <img src="{% static 'bootstrap/images/divisor.png' %}" class="img-fluid"> 
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="row mt-5">
-
-                    <div class="container-fluid">
-                    
-                        <div class="col-xl-12 col-lg-12 col-md-11">
-
-                            <img src="{% static 'bootstrap/images/imgAbout.png' %}" class="img-fluid float-left mr-lg-2 mr-xl-2 ml-md-3">
-
-                            <h2 class="text-center">Lorem Ipsum</h2>
-                            <p class="text-center mx-auto" style="font-size: 12pt;">Dolorum consequatur incidunt corporis veniam aliquam iusto omnis quaerat eaque. Ut dolorem necessitatibus et et et. Et natus aspernatur exercitationem optio consequatur molestias. Magnam fuga itaque itaque qui voluptas.</p>
-        
-                            <p class="text-center mx-auto" style="font-size: 12pt;">Veniam ex ut molestias omnis tempore voluptatem aut deserunt accusantium. Cum nesciunt explicabo cumque in. Aut amet minus eum eaque. Magnam ipsa nihil mollitia nihil consequatur unde sed. Fuga quia iste sunt non et quaerat.</p>
-        
-                            <p class="text-center mx-auto" style="font-size: 12pt;">A minus eum consequatur magnam ex. Vel unde quos et. Eos accusantium autem incidunt inventore quos incidunt. Sit corporis dolor. Hic praesentium inventore harum facilis. Ut deserunt nulla fugit officia consequatur eaque vitae.</p>
-                            
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-            <!-- Contato -->
-
-            <div class="container" id="contato">
-
-                <div class="row mt-5">
-
-                    <div class="col-12">
-
-                        <h1 class="text-center">Contato</h1>
-                        <img src="{% static 'bootstrap/images/divisor.png' %}" class="img-fluid">
-
-                    </div>
-
-                </div>
-
-                <div class="row mt-5">
-                    <!-- wpp -->
-
-                    <a href="https://api.whatsapp.com/send?phone=5511968566487" target="_blank" role="button" class="btn mr-md-n4 mr-xl-5 mr-lg-3">
-                        <img src="{% static 'bootstrap/images/wpp.png' %}" class="img-fluid float-left">
-                    </a>
-
-                    <!-- tel -->
-
-                    <a href="tel:+5511968566487" role="button" class="btn mr-md-n4 mr-xl-5 mr-lg-3">
-                        <img src="{% static 'bootstrap/images/telefone.png' %}" class="img-fluid float-left">
-                    </a>
-
-                    <!-- Facebook -->
-
-                    <a href="https://www.facebook.com/casadedonabrasilina/" target="_blank" role="button" class="btn mr-md-n4 mr-xl-5 mr-lg-3">
-                        <img src="{% static 'bootstrap/images/fb.png' %}" class="img-fluid float-left">
-                    </a>
-
-                    <!-- Instagram -->
-
-                    <a href="https://www.instagram.com/casadedonabrasilina/" target="_blank" role="button" class="btn mr-md-n4 mr-xl-5 mr-lg-3">
-                        <img src="{% static 'bootstrap/images/insta.png' %}" class="img-fluid float-left">
-                    </a>
-
-                    <!-- Email -->
-
-                    <a href="#" role="button" class="btn mr-md-n4 mr-xl-5 mr-lg-3">
-                        <img src="{% static 'bootstrap/images/email.png' %}" class="img-fluid float-left">
-                    </a>
-
-
-                </div>
-
-            </div>
+            {% block main %}
+            {% endblock %}
             <!-- Footer -->
-            <footer class="page-footer font-small mt-5" id="footer"> 
 
-                <!-- Copyright -->
-                <div class="footer-copyright text-center py-3 ">
-                    <p style="color: #FFF;">Copyright &copy; 2019 Casa de Dona Brasilina
-                    <br/> Todos os direitos reservados</p>
+            <footer class="page-footer font-small mt-5" id="footer">
+            
+                <div class="footer-copyright text-center py-3" style="color: #fff;">© 2019 Copyright: Casa de Dona Brasilina
+                    <br/>Todos os direitos reservados teste     
+                    
                 </div>
+                <!-- Copyright -->
 
             </footer>
-            
+            <!-- Footer -->
         </div> 
     </body>
     
