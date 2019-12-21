@@ -3,8 +3,6 @@ from .models import Cliente, Estoque, Receita, Telefone, Pedido
 
 # Register your models here.
 
-class ClienteAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'email','bairro', 'endereco', 'cpf_cnpj')
 
 class TelefoneAdmin(admin.ModelAdmin):
     list_display = ('descricao', 'telefone', 'get_name')
@@ -28,7 +26,7 @@ class PedidoAdmin(admin.ModelAdmin):
     get_name.admin_order_field = 'cliente'
     get_name.short_description = 'Nome do cliente'
 
-admin.site.register(Cliente, ClienteAdmin)
+admin.site.register(Cliente)
 admin.site.register(Telefone, TelefoneAdmin)
 admin.site.register(Estoque, EstoqueAdmin)
 admin.site.register(Receita, ReceitaAdmin)

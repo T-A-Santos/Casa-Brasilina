@@ -1,0 +1,63 @@
+{% extends "baseAdmin.html" %}
+
+{% load static %}
+
+{% block main %}
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'core_home' %}">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">Tables</li>
+        </ol>
+
+      <form action="{% url 'create_customers' %}" method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <div class="col-3">
+              <label for="formGroupExampleInput">Nome Completo:</label>
+            </div>
+            {{ form.nome }}
+          </div>
+          <div class="form-group">
+            <div class="col-3">
+              <label for="exampleInputEmail1">Endereço de email:</label>
+            </div>
+            {{ form.email }}
+          </div>
+          <div class="form-group">
+              <div class="col-3">
+                <label for="exampleInput2">Bairro:</label>
+              </div>
+                {{ form.bairro }}
+          </div>
+          <div class="form-group">
+            <div class="col-3">
+              <label for="exampleInput3">Endereço:</label>
+            </div>
+                {{ form.endereco }}
+          </div>
+          <div class="form-group">
+            <div class="col-3">
+              <label for="exampleInput4">CPF/CNPJ:</label>
+            </div>
+                {{ form.cpf_cnpj }}
+          </div>
+            
+          <button type="button submit" class="btn btn-primary">Cadastrar</button>
+
+        </form>
+
+      </div>
+
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#cpf").mask("999.999.999-99");
+      });
+    </script>
+{% endblock %}

@@ -9,6 +9,9 @@ class Cliente(models.Model):
     endereco = models.CharField(max_length=200)
     cpf_cnpj = models.CharField(max_length=50, primary_key=True)
 
+    def __str__(self):
+        return self.nome, self.email, self.bairro, self.endereco, self.cpf_cnpj
+
 
 class Telefone(models.Model):
     telefone = models.CharField(max_length=20)
