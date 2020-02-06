@@ -2,6 +2,11 @@ from django.db import models
 
 
 class Cliente(models.Model):
+    OPCOES = (
+        ('cel', 'Celular'),
+        ('tel', 'Telefone fixo')
+    )
+
     nome = models.CharField(max_length=100)
     email = models.EmailField(max_length=200)
     bairro = models.CharField(max_length=100)
@@ -10,7 +15,10 @@ class Cliente(models.Model):
     numero = models.CharField(max_length=7)
     cpf = models.CharField(max_length=20, blank=True)
     cnpj = models.CharField(max_length=30, blank=True)
-    
+    telefone = models.CharField(max_length=15, blank=True)   
+    descricao = models.CharField(max_length=15, choices=OPCOES, unique=True, blank=True)
+
+
     def __str__(self):
         return self.nome
 
